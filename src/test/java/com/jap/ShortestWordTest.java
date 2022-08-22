@@ -30,7 +30,9 @@ public class ShortestWordTest {
         // Test scenario: Input words with same length
         assertEquals("looped", shortestWord.findShortestWord(new String[]{"looped", "poodle", "student", "calmed" }));
         // Test scenario: Input words with empty strings
-        assertEquals("", shortestWord.findShortestWord(new String[]{"Atrocity", "Language", "student"}));
+        assertEquals("", shortestWord.findShortestWord(new String[]{"Atrocity", "", "student", "" }));
+        // Test scenario: Input empty array of words
+        assertEquals("Cannot find shortest word as array is empty", shortestWord.findShortestWord(new String[]{}));
 
     }
 }
